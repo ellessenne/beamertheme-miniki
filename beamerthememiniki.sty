@@ -54,11 +54,8 @@
 \setbeamercolor{block body}{parent = palette2}
 \setbeamercolor{block title example}{parent = palette3}
 \setbeamercolor{block body example}{parent = palette4}
-\setbeamercolor{itemize item}{fg = minikiSecondary}
-\setbeamercolor{enumerate item}{fg = minikiSecondary}
-
-% Title graphic
-\usepackage[absolute, overlay]{textpos}
+\setbeamercolor{itemize item}{fg = minikiPrimaryLight}
+\setbeamercolor{enumerate item}{fg = minikiPrimaryLight}
 
 % Tikz
 \usepackage{tikz}
@@ -203,18 +200,17 @@
 		};%
 	}%
 	\begin{minipage}[t][\paperheight]{\textwidth}
-		\vspace{7em}
-		\centering
+		\vspace{10em}
 		\ifx\inserttitle\@empty%
 		\else%
 			{\usebeamercolor[fg]{title}\usebeamerfont{title}\setbeamercolor{math text}{parent = palette1}\inserttitle\par}%
 		\fi%
-		\vspace{0.5em}
+		\vspace{1em}
 		\ifx\insertsubtitle\@empty%
 		\else%
 			{\usebeamercolor[fg]{subtitle}\usebeamerfont{subtitle}\insertsubtitle\par}%
 		\fi%
-		\vspace{3.25em}
+		\vspace{2em}
 		\ifx\insertauthor\@empty%
 		\else%
 			{\usebeamercolor[fg]{author}\usebeamerfont{author}\insertauthor\par}%
@@ -223,16 +219,17 @@
 		\else%
 			{\usebeamercolor[fg]{institute}\usebeamerfont{institute}\insertinstitute\par}%
 		\fi%
-		\vspace{3.25em}
+		\vspace{2em}
 		\ifx\insertdate\@empty%
 		\else%
 			{\usebeamercolor[fg]{date}\usebeamerfont{date}\insertdate\par}%
 		\fi%
 		\vspace{2em}
 	\end{minipage}%
-	\begin{textblock}{1}(0,0)
-		\inserttitlegraphic
-	\end{textblock}
+
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[anchor = north east] at (current page.north east) {\inserttitlegraphic};
+	\end{tikzpicture}
 }
 
 % Frametitle
