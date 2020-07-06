@@ -1,3 +1,4 @@
+%!TeX program = xelatex
 \documentclass{beamer}
 
 \usetheme[
@@ -10,29 +11,29 @@
   % This is intended to be a lighter version of the primary color. Defaults to Pantone 431 C, 50%
   % primaryLightColor = DAE6EF,
 	% secondaryColor = 5B6770,
-]{miniuol}
+]{miniki}
 
 % 150% Line Spacing
 \linespread{1.213}
 
-\title{The Title:}
+\title{The Title}
 \subtitle{There Is a Subtitle Too}
 \date{\today}
 \author{A. Author}
 \institute{Institute}
-\titlegraphic{\includegraphics[width = 8em]{./graphics/uol-white.pdf}}
+\titlegraphic{\includegraphics[width = 10em]{./graphics/KI-Logo_neg.eps}}
 \begin{document}
 
 \begin{frame}[plain, noframenumbering]
 	\titlepage
 \end{frame}
 
-\begin{frame}{The \texttt{miniuol} beamer theme}
-	\texttt{miniuol} is a minimal theme for the \LaTeX{} beamer document class that emphasizes simplicity, legibility and elegance.
+\begin{frame}{The \texttt{miniki} beamer theme}
+	\texttt{miniki} is a minimal theme for the \LaTeX{} beamer document class that emphasizes simplicity, legibility and elegance.
 
 	It has been forked from the \emph{Manc} theme (available at \url{https://github.com/ibab/beamertheme-manc}), with modifications to fit my taste.
 
-	For instance, \emph{Manc} used the Fira typeface family throughout; that has been replaced with a combination of the San Francisco font stack and Iosevka Slab (as a monospaced font).
+	It uses the Fira Sans typeface family with Fira Code as a monospaced font, and it aims to be similar to the \texttt{ki} theme from the \texttt{xaringan} R package, which can be used to create HTML slide decks.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -115,7 +116,7 @@ y = a + \beta x + \varepsilon
 		\begin{tikzpicture}[overlay, remember picture]
 		\node[anchor = center] at (current page.center) {
 		\begin{beamercolorbox}[center]{title}
-			\usebeamerfont{large text} Thank you.
+			\usebeamerfont{huge text} Thank you.
 		\end{beamercolorbox}};
 		\end{tikzpicture}
 \end{darkframe}

@@ -1,0 +1,10 @@
+\frametitle{A slide with code}
+^^IHere is some R code:
+
+\begin{verbatim}
+# Plot using R-base
+x <- runif(10)
+y <- 2 * x + rnorm(10)
+plot(x, y)
+\end{verbatim}
+
