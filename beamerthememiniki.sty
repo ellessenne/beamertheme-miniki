@@ -49,7 +49,7 @@
 \setbeamercolor{author}{parent = palette1}
 \setbeamercolor{institute}{parent = palette1}
 \setbeamercolor{date}{parent = palette1}
-\setbeamercolor{frametitle}{fg = white, bg = minikiPrimary}
+\setbeamercolor{frametitle}{fg = minikiPrimary, bg = white}
 \setbeamercolor{block title}{parent = palette1}
 \setbeamercolor{block body}{parent = palette2}
 \setbeamercolor{block title example}{parent = palette3}
@@ -201,14 +201,14 @@
 		};%
 	}%
 	\begin{minipage}[t][\paperheight]{\textwidth}
-		\vspace{10em}
+		\vfill
 		\ifx\inserttitle\@empty%
 		\else%
 			{\usebeamercolor[fg]{title}\usebeamerfont{title}\setbeamercolor{math text}{parent = palette1}\inserttitle\par}%
 		\fi%
-		\vspace{1em}
 		\ifx\insertsubtitle\@empty%
 		\else%
+			\vspace{1em}
 			{\usebeamercolor[fg]{subtitle}\usebeamerfont{subtitle}\insertsubtitle\par}%
 		\fi%
 		\vspace{2em}
@@ -220,12 +220,11 @@
 		\else%
 			{\usebeamercolor[fg]{institute}\usebeamerfont{institute}\insertinstitute\par}%
 		\fi%
-		\vspace{2em}
 		\ifx\insertdate\@empty%
 		\else%
 			{\usebeamercolor[fg]{date}\usebeamerfont{date}\insertdate\par}%
 		\fi%
-		\vspace{2em}
+		\vspace{3em}
 	\end{minipage}%
 
 	\begin{tikzpicture}[remember picture, overlay]
@@ -237,7 +236,7 @@
 \setbeamertemplate{frametitle}
 {%
 \nointerlineskip % This one's tricky
-\begin{beamercolorbox}[wd = \paperwidth, leftskip = 0.3cm, rightskip = 0.3cm, ht = 2.2ex, dp = 0.9ex]{frametitle}
+\begin{beamercolorbox}[wd = \paperwidth, leftskip = 1em, rightskip = 1em, ht = 2em]{frametitle}
 	\usebeamerfont{frametitle}{\setbeamercolor{math text}{parent = palette1}\insertframetitle}%
 \end{beamercolorbox}
 }
