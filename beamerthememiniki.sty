@@ -69,6 +69,7 @@
 \usepackage{fontspec}
 \usefonttheme{professionalfonts}
 \usepackage{unicode-math}
+\setmathfont{Latin Modern Math}
 \newfontfamily\SemiBold[
 	BoldFont = {Fira Sans Bold},
 	ItalicFont = {Fira Sans Medium Italic},
@@ -100,7 +101,7 @@
 	Contextuals = {Alternate},
 	Ligatures = {TeX}
 ]{Fira Code Light}
-\setmathfont{Latin Modern Math}
+\def\verbatim@nolig@list{}
 
 % Boxes
 \usepackage{tcolorbox}
